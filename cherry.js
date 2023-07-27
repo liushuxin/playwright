@@ -1,17 +1,16 @@
 const { chromium } = require("playwright");
-//chromium.launch({ headless: false, slowMo: 50 });
 
-const path =
-  "https://gitlab.zatech.online/genesis/greatstaff/-/merge_requests/2269";
-const cherryBranch = ["release/2.47.x", "release/2.50.x", "release/2.51.x"];
+const config = require("./config.json");
 
 (async () => {
   const browser = await chromium.launch({ headless: false, slowMo: 500 });
   // Create pages, interact with UI elements, assert values
 
   const page = await browser.newPage();
-  const username = "shuxin.liu";
-  const password = "L1shuxin";
+  const username = config.username;
+  const password = config.password;
+  const cherryBranch = config.cherryBranch;
+  const path = config.cherryPath;
 
   await page.goto(path);
 
