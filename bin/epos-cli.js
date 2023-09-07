@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 
 const { program } = require("commander");
+const { spawn } = require("node:child_process");
+
 const merge = require("../index");
 const cherry = require("../cherry");
+
+// setup program
+program
+  .command("init")
+  .description("初始化项目")
+  .action(function (option) {});
 
 // merge
 program

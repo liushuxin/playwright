@@ -1,17 +1,16 @@
 {
-  "name": "epos",
+  "name": "playwright",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "epos": "./bin/epos-cli.js"
-  },
+  "bin": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@playwright/test": "^1.36.2",
     "axios": "^1.4.0",
     "commander": "^11.0.0",
     "playwright": "^1.17.0"
